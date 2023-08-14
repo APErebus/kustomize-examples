@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: alastair
+  labels:
+    role: web
+spec:
+  replicas: #{ReplicaCount}
+  selector:
+    matchLabels:
+      role: web
+  template:
+    metadata:
+      labels:
+        role: web
+    spec:
+      containers:
+      - name: web
+        image: nginx
