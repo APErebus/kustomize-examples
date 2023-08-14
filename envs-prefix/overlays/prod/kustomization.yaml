@@ -3,5 +3,5 @@ kind: Kustomization
 resource:
   - ../../base
 patches:
-  - deployment.yaml
+  - path: deployment.yaml
 namePrefix: prod-
